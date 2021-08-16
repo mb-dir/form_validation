@@ -1,6 +1,8 @@
 //The only purpose of this module is getting reference to suitable DOM elements(mainly related with form) and, depending on the condition, distribute tasks (checking appropriate form inputs) to other modules
 
 import checkUserName from "./checkUserName";
+import checkEmail from "./checkEmail";
+
 
 function formValidator(){
     const form = document.querySelector("#mainForm");
@@ -16,7 +18,9 @@ function formValidator(){
             }
             if(key === "userEmail"){
                 //call the function which validates the email
-                console.log("userEmail")
+                if(checkEmail(value) === false){
+                    e.preventDefault();
+                }
             }
             if(key === "userPassword"){
                 //call the function which validates the password
