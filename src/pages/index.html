@@ -7,6 +7,22 @@
     <title>Test site</title>
 </head>
 <body>
-    
+    <!-- Each input has name attribute cuz I will want to use FormData (https://developer.mozilla.org/en-US/docs/Web/API/FormData) -->
+    <form class="mainForm" id="mainForm">
+        <label for="userName" class="mainForm__label">Imie:</label>
+        <input type="text" name="userName" class="mainForm__input" id="userName">
+
+        <label for="userEmail" class="mainForm__label">e-mail:</label>
+        <input type="email" name="userEmail" class="mainForm__input" id="userEmail">
+
+        <label for="userPassword" class="mainForm__label">Hasło:</label>
+        <input type="password" name="userPassword" class="mainForm__input" id="userPassword">
+
+        <label for="userPasswordConfirm" class="mainForm__label">Powtórz Hasło:</label>
+        <input type="password" name="userPasswordConfirm" class="mainForm__input" id="userPasswordConfirm">
+
+        <label for="userRodoConfirm" class="mainForm__label">RODO</label>
+        <input type="checkbox" name="userRodoConfirm" class="mainForm__input" id="userRodoConfirm">
+    </form>
 </body>
 </html>
