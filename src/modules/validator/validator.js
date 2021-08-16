@@ -7,10 +7,10 @@ function formValidator(){
     form.addEventListener("submit", (e)=>{
         const formData = new FormData(form);
 
-        for(const [key, values] of formData.entries()) {
+        for(const [key, value] of formData.entries()) {
             if(key === "userName"){
                 //call the function which validates the name
-                if(checkUserName(values) === false){
+                if(checkUserName(value) === false){
                     e.preventDefault();
                 }
             }
