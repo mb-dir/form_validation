@@ -6,8 +6,23 @@ function formValidator(){
         e.preventDefault();
         const formData = new FormData(form);
 
-        for(const pair of formData.entries()) {
-            console.log(pair[0]+ ', '+ pair[1]);
+        for(const [key, values] of formData.entries()) {
+            if(key === "userName"){
+                //call the function which validates the name
+                console.log("userName")
+            }
+            if(key === "userEmail"){
+                //call the function which validates the email
+                console.log("userEmail")
+            }
+            if(key === "userPassword"){
+                //call the function which validates the password
+                console.log("userPassword")
+            }
+            if(key === "userPasswordConfirm"){
+                //call the function which validates the correctness of a password and a repeated password
+                console.log("userPasswordConfirm")
+            }  
         }
     });
 }
