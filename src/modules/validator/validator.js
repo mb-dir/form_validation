@@ -2,6 +2,7 @@
 
 import checkUserName from "./checkUserName";
 import checkEmail from "./checkEmail";
+import checkPassword from "./checkPassword";
 
 
 function formValidator(){
@@ -24,7 +25,9 @@ function formValidator(){
             }
             if(key === "userPassword"){
                 //call the function which validates the password
-                console.log("userPassword")
+                if(checkPassword(value) === false){
+                    e.preventDefault();
+                }
             }
             if(key === "userPasswordConfirm"){
                 //call the function which validates the correctness of a password and a repeated password
