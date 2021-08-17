@@ -3,6 +3,7 @@
 import checkUserName from "./checkUserName";
 import checkEmail from "./checkEmail";
 import checkPassword from "./checkPassword";
+import checkPasswordConfirm from "./checkPasswordConfirm";
 
 
 function formValidator(){
@@ -30,8 +31,12 @@ function formValidator(){
                 }
             }
             if(key === "userPasswordConfirm"){
+                //I have to get the password from first "password" input in order to check if the passwords are te same
+                const firstPassword = formData.get("userPassword");
                 //call the function which validates the correctness of a password and a repeated password
-                console.log("userPasswordConfirm")
+                if(checkPasswordConfirm(value, firstPassword) === false){
+                    e.preventDefault();
+                }
             }  
         }
     });
