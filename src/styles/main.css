@@ -28,3 +28,10 @@ body{
     display: block;
     margin-bottom: 3px;
 }
+
+.mainForm__input{
+    border: 1px solid #ff7575;
+    background-color: #171a1d;
+    caret-color: beige;
+    color: beige;
+}
