@@ -1,0 +1,12 @@
+/* This is simple and samll project, I do not see reason for using scss, or spliting styles into separate files */
+
+/* basic styles */
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    background-color: #171a1d;
+    color: beige;
+}

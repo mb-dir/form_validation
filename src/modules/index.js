@@ -3,6 +3,7 @@
 import regeneratorRuntime from "regenerator-runtime";
 
 // styles import
+import "../styles/main.css";
 
 //modules import
 import formValidator from "./validator/validator";
