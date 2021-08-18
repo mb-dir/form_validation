@@ -4,6 +4,7 @@ import checkUserName from "./checkUserName";
 import checkEmail from "./checkEmail";
 import checkPassword from "./checkPassword";
 import checkPasswordConfirm from "./checkPasswordConfirm";
+import showError from "./showError";
 
 
 function formValidator(){
@@ -26,7 +27,7 @@ function formValidator(){
                             invalidInput = input;
                         }
                     }
-                    console.log(invalidInput);
+                    showError(invalidInput);
                 }
             }
             if(key === "userEmail"){
@@ -42,7 +43,7 @@ function formValidator(){
                             invalidInput = input;
                         }
                     }
-                    console.log(invalidInput);
+                    showError(invalidInput);
                 }
             }
             if(key === "userPassword"){
@@ -58,7 +59,7 @@ function formValidator(){
                             invalidInput = input;
                         }
                     }
-                    console.log(invalidInput);
+                    showError(invalidInput);
                 }
             }
             if(key === "userPasswordConfirm"){
@@ -76,7 +77,7 @@ function formValidator(){
                             invalidInput = input;
                         }
                     }
-                    console.log(invalidInput);
+                    showError(invalidInput);
                 }
             }  
         }
