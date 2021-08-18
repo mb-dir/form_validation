@@ -1,0 +1,37 @@
+/* This is simple and samll project, I do not see reason for using scss, or spliting styles into separate files */
+
+/* basic styles */
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    background-color: #171a1d;
+    color: beige;
+}
+
+/* styles related with form element and his children */
+.mainForm{
+    width: 75%;
+    margin: 0 auto;
+    padding: 50px;
+    border: 3px solid #ff7575;
+    box-shadow: 0px 5px 15px 0px #B14B4C;
+}
+
+.mainForm__inputContainer{
+    margin: 10px 0;
+}
+
+.mainForm__label{
+    display: block;
+    margin-bottom: 3px;
+}
+
+.mainForm__input{
+    border: 1px solid #ff7575;
+    background-color: #171a1d;
+    caret-color: beige;
+    color: beige;
+}
