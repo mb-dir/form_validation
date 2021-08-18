@@ -8,6 +8,7 @@ import checkPasswordConfirm from "./checkPasswordConfirm";
 
 function formValidator(){
     const form = document.querySelector("#mainForm");
+    const formInputs = form.querySelectorAll(".mainForm__input");
     form.addEventListener("submit", (e)=>{
         const formData = new FormData(form);
 
@@ -16,18 +17,48 @@ function formValidator(){
                 //call the function which validates the name
                 if(checkUserName(value) === false){
                     e.preventDefault();
+
+                    //Code below helps to define which from the inputs has invalid value, input with invalid value is passing to the special function which shows informations about invalid value right below this input
+                    let invalidInput = null;
+                    for(const input of formInputs){
+                        const nameAttributeValue = input.getAttribute("name");
+                        if(nameAttributeValue === "userName"){
+                            invalidInput = input;
+                        }
+                    }
+                    console.log(invalidInput);
                 }
             }
             if(key === "userEmail"){
                 //call the function which validates the email
                 if(checkEmail(value) === false){
                     e.preventDefault();
+
+                    ///Code below helps to define which from the inputs has invalid value, input with invalid value is passing to the special function which shows informations about invalid value right below this input
+                    let invalidInput = null;
+                    for(const input of formInputs){
+                        const nameAttributeValue = input.getAttribute("name");
+                        if(nameAttributeValue === "userEmail"){
+                            invalidInput = input;
+                        }
+                    }
+                    console.log(invalidInput);
                 }
             }
             if(key === "userPassword"){
                 //call the function which validates the password
                 if(checkPassword(value) === false){
                     e.preventDefault();
+
+                    //Code below helps to define which from the inputs has invalid value, input with invalid value is passing to the special function which shows informations about invalid value right below this input
+                    let invalidInput = null;
+                    for(const input of formInputs){
+                        const nameAttributeValue = input.getAttribute("name");
+                        if(nameAttributeValue === "userPassword"){
+                            invalidInput = input;
+                        }
+                    }
+                    console.log(invalidInput);
                 }
             }
             if(key === "userPasswordConfirm"){
@@ -36,6 +67,16 @@ function formValidator(){
                 //call the function which validates the correctness of a password and a repeated password
                 if(checkPasswordConfirm(value, firstPassword) === false){
                     e.preventDefault();
+
+                    //Code below helps to define which from the inputs has invalid value, input with invalid value is passing to the special function which shows informations about invalid value right below this input
+                    let invalidInput = null;
+                    for(const input of formInputs){
+                        const nameAttributeValue = input.getAttribute("name");
+                        if(nameAttributeValue === "userPasswordConfirm"){
+                            invalidInput = input;
+                        }
+                    }
+                    console.log(invalidInput);
                 }
             }  
         }
