@@ -21,7 +21,11 @@ body{
 }
 
 .mainForm__inputContainer{
-    margin: 10px 0;
+    max-width: 500px;
+    /* Now width is defined, so I have to use margin auto for horizonatl in order to keep this element in the center of mainForm */
+    margin: 10px auto;
+    /* position relative cuz one of the child(errorInfo) will be positioning by position absolute*/
+    position: relative;
 }
 
 .mainForm__label{
