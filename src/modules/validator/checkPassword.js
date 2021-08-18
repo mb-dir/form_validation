@@ -14,8 +14,6 @@ function checkPassword(password){
     if(isSpecialSign && isNumber&& isCapitalLetter){
         return true;
     }else{
-        //In the final version, instead of this alert, the application will highlight the incorrectly filled input, a separate function in a separate module will be responsible for this, but for the sake of simplicity, the application displays an alert
-        alert("Zbyt słabe hasło!");
         return false;
     }
 }
