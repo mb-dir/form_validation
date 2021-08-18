@@ -39,3 +39,14 @@ body{
     caret-color: beige;
     color: beige;
 }
+.mainForm__errorInfo{
+    /* Cuz it must be over the inputs - that provides better visibility of the message */
+    z-index: 1;
+    width: 100%;
+    opacity: 1;
+    background-color: #171a1d;
+    border: 2px solid #ff7575;
+    border-radius: 5px;
+    position: absolute;
+    top: 110%;
+}
