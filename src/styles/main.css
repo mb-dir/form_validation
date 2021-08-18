@@ -40,13 +40,34 @@ body{
     color: beige;
 }
 .mainForm__errorInfo{
-    /* Cuz it must be over the inputs - that provides better visibility of the message */
-    z-index: 1;
     width: 100%;
-    opacity: 1;
+    opacity: 0;
     background-color: #171a1d;
     border: 2px solid #ff7575;
     border-radius: 5px;
     position: absolute;
     top: 110%;
+}
+
+/* This class will be dynamically added if there is an invalid value in an input */
+.mainForm__errorInfo--visible{
+    /* Cuz it must be over the inputs - that provides better visibility of the message, z-index must be in class which is as an attribute of an element only durning the animation, 
+otherwise the element with the error message (which has the z-index: 1 all the time) will "cover" the inputs, even though it will have an opacity of 0*/
+    z-index: 1;
+    animation: showError 8s 1;
+}
+
+@keyframes showError {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    70%{
+        opacity: .9;
+    }
+    100%{
+        opacity: 0;
+    }
 }
