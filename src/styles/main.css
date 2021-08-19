@@ -48,7 +48,21 @@ body{
     position: absolute;
     top: 110%;
 }
-
+.mainForm__btnSend{
+    width: 100px;
+    height: 33px;
+    color: beige;
+    background-color: #171a1d;
+    border: 2px solid #ff7575;
+    border-radius: 5px;   
+}
+.mainForm__btnSend:hover{
+    cursor: pointer;
+}
+.mainForm__btnSend:disabled{
+    cursor: auto;
+    background-color: #353e46;
+}
 /* This class will be dynamically added if there is an invalid value in an input */
 .mainForm__errorInfo--visible{
     /* Cuz it must be over the inputs - that provides better visibility of the message, z-index must be in class which is as an attribute of an element only durning the animation, 
