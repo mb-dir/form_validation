@@ -28,7 +28,7 @@ function formValidator(){
                             invalidInput = input;
                         }
                     }
-                    showError(invalidInput);
+                    showError(invalidInput, btnSend);
                 }
             }
             if(key === "userEmail"){
@@ -44,7 +44,7 @@ function formValidator(){
                             invalidInput = input;
                         }
                     }
-                    showError(invalidInput);
+                    showError(invalidInput, btnSend);
                 }
             }
             if(key === "userPassword"){
@@ -60,7 +60,7 @@ function formValidator(){
                             invalidInput = input;
                         }
                     }
-                    showError(invalidInput);
+                    showError(invalidInput, btnSend);
                 }
             }
             if(key === "userPasswordConfirm"){
@@ -78,7 +78,7 @@ function formValidator(){
                             invalidInput = input;
                         }
                     }
-                    showError(invalidInput);
+                    showError(invalidInput, btnSend);
                 }
             }  
         }
