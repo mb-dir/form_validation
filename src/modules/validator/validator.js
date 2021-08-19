@@ -10,6 +10,7 @@ import showError from "./showError";
 function formValidator(){
     const form = document.querySelector("#mainForm");
     const formInputs = form.querySelectorAll(".mainForm__input");
+    const btnSend = form.querySelector("#btnSend");
     form.addEventListener("submit", (e)=>{
         const formData = new FormData(form);
 
