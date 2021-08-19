@@ -21,7 +21,11 @@ body{
 }
 
 .mainForm__inputContainer{
-    margin: 10px 0;
+    max-width: 500px;
+    /* Now width is defined, so I have to use margin auto for horizonatl in order to keep this element in the center of mainForm */
+    margin: 10px auto;
+    /* position relative cuz one of the child(errorInfo) will be positioning by position absolute*/
+    position: relative;
 }
 
 .mainForm__label{
@@ -34,4 +38,36 @@ body{
     background-color: #171a1d;
     caret-color: beige;
     color: beige;
+}
+.mainForm__errorInfo{
+    width: 100%;
+    opacity: 0;
+    background-color: #171a1d;
+    border: 2px solid #ff7575;
+    border-radius: 5px;
+    position: absolute;
+    top: 110%;
+}
+
+/* This class will be dynamically added if there is an invalid value in an input */
+.mainForm__errorInfo--visible{
+    /* Cuz it must be over the inputs - that provides better visibility of the message, z-index must be in class which is as an attribute of an element only durning the animation, 
+otherwise the element with the error message (which has the z-index: 1 all the time) will "cover" the inputs, even though it will have an opacity of 0*/
+    z-index: 1;
+    animation: showError 8s 1;
+}
+
+@keyframes showError {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }

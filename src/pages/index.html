@@ -12,21 +12,25 @@
         <div class="mainForm__inputContainer">
             <label for="userName" class="mainForm__label">Imie:</label>
             <input type="text" name="userName" class="mainForm__input" id="userName" required aria-required="true" minlength="2">
+            <div class="mainForm__errorInfo">Podane imie zawiera nieprawidłowe znaki(liczby, znaki specjalne)</div>
         </div>
 
         <div class="mainForm__inputContainer">
             <label for="userEmail" class="mainForm__label">e-mail:</label>
             <input type="email" name="userEmail" class="mainForm__input" id="userEmail" required aria-required="true">
+            <div class="mainForm__errorInfo">Podany e-mail nie zawera domeny(np"onet.pl")</div>
         </div>
 
         <div class="mainForm__inputContainer">
             <label for="userPassword" class="mainForm__label">Hasło:</label>
             <input type="password" name="userPassword" class="mainForm__input" id="userPassword" required aria-required="true" minlength="8">
+            <div class="mainForm__errorInfo">Podane hasło nie jest wystarczająco silne</div>
         </div>
 
         <div class="mainForm__inputContainer">
             <label for="userPasswordConfirm" class="mainForm__label">Powtórz Hasło:</label>
-            <input type="password" name="userPasswordConfirm" class="mainForm__input" id="userPasswordConfirm" required aria-required="true" minlength="8">    
+            <input type="password" name="userPasswordConfirm" class="mainForm__input" id="userPasswordConfirm" required aria-required="true" minlength="8">
+            <div class="mainForm__errorInfo">Hasła nie są takie same</div>
         </div>
 
         <div class="mainForm__inputContainer">
@@ -34,7 +38,7 @@
             <input type="checkbox" name="userRodoConfirm" class="mainForm__input" id="userRodoConfirm" required aria-required="true">
         </div>
 
-        <button class="mainForm__btnSend">Wyślij</button>
+        <button class="mainForm__btnSend" id="btnSend">Wyślij</button>
     </form>
 </body>
 </html>
