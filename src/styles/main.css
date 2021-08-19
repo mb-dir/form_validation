@@ -34,10 +34,16 @@ body{
 }
 
 .mainForm__input{
-    border: 1px solid #ff7575;
+    width: 200px;
+    height: 25px;
+    border: 2px solid #ff7575;
     background-color: #171a1d;
     caret-color: beige;
     color: beige;
+}
+.mainForm__input--small{
+    width: 100px;
+    height: 15px;
 }
 .mainForm__errorInfo{
     width: 100%;
