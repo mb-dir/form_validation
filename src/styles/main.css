@@ -61,11 +61,11 @@ otherwise the element with the error message (which has the z-index: 1 all the t
     0%{
         opacity: 0;
     }
-    20%{
+    10%{
         opacity: 1;
     }
-    70%{
-        opacity: .9;
+    90%{
+        opacity: 1;
     }
     100%{
         opacity: 0;
